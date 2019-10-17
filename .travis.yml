@@ -12,7 +12,7 @@ before_install:
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
-  - gcloud auth activate service account --key-file service-account.json
+  - gcloud auth activat-service-account --key-file service-account.json
   - gcloud config set project reactapp-k8s #get the project
   - gcloud config set compute/zone us-central1-a # get the zone
   - gcloud container clusters get-credentials reactapp-k8s	#get the cluster
