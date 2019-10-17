@@ -8,7 +8,7 @@ docker push sentinelwawesh/multi-client:$SHA
 docker push sentinelwawesh/multi-worker:$SHA
 docker push sentinelwawesh/multi-server:$SHA
 kubectl apply  -f k8s
-kubectl set image deployments/server-deployment server= sentinelwawesh/multi-server:$SHA
-kubectl set image deployments/client-deployment client= sentinelwawesh/multi-client:$SHA
-kubectl set image deployments/worker-deployment worker= sentinelwawesh/multi-worker:$SHA
+kubectl set image deployment/server-deployment server= sentinelwawesh/multi-server:$SHA
+kubectl set image deployment/client-deployment client= sentinelwawesh/multi-client:$SHA
+kubectl set image deployment/worker-deployment worker= sentinelwawesh/multi-worker:$SHA
 
