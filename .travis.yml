@@ -15,7 +15,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project reactapp-k8s #get the project
   - gcloud config set compute/zone us-central1-a # get the zone
-  - gcloud container clusters get-credentials reactapp-k8s	#get the cluster
+  - gcloud container clusters get-credentials reactapp-k8s	#get the cluster##
   - echo "$DOCKER_PASSWORD"| docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t sentinelwawesh/react-test -f ./client/Dockerfile.dev ./client
 
